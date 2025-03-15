@@ -1,0 +1,445 @@
+[
+    {
+        "name": "Beachside Bungalow",
+        "category": "Waterfront",
+        "city": "Del Mar",
+        "state": "CA",
+        "id": 1001,
+        "isFeatured": true,
+        "isFavorite": true,
+        "isBookmarked": false,
+        "askingPrice": 78291,
+        "coordinates": {
+            "longitude": -117.26814,
+            "latitude": 32.95891
+        },
+        "imageName": "beachsidebungalow",
+        "renovationCost": 50000,
+        "potentialValueAfterRenovation": 150000,
+        "renovationDifficulty": "Moderate",
+        "renovationPriorityAreas": ["Roof", "Kitchen", "Plumbing"],
+        "condition": "Fair",
+        "needsInspection": true,
+        "lastRenovationDate": "2023-06-28",
+        "renovationHistory": [
+            {
+                "date": "2015-06-12",
+                "description": "Replaced roof and updated electrical wiring",
+                "cost": 20000
+            },
+            {
+                "date": "2019-03-14",
+                "description": "Updated light fixtures",
+                "cost": 500
+            },
+            {
+                "date": "2023-06-28",
+                "description": "Replaced flooring",
+                "cost": 3500
+            }
+        ],
+        "rentalIncomePotential": 1200,
+        "expectedROI": 0.50,
+        "schoolDistrictRating": 7.5,
+        "walkabilityScore": 6.2,
+        "crimeRate": 4.0,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Cheap Chalet",
+        "category": "Rural",
+        "city": "Thackerville",
+        "state": "OK",
+        "id": 1002,
+        "isFeatured": false,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 48599,
+        "coordinates": {
+            "longitude": -97.154502,
+            "latitude": 33.793089
+        },
+        "imageName": "cheapchalet",
+        "renovationCost": 30000,
+        "potentialValueAfterRenovation": 100000,
+        "renovationDifficulty": "Moderate",
+        "renovationPriorityAreas": ["Roof", "Bathroom"],
+        "condition": "Fair",
+        "needsInspection": true,
+        "lastRenovationDate": "2010-08-20",
+        "renovationHistory": [
+            {
+                "date": "2010-08-20",
+                "description": "Updated plumbing and repainted exterior",
+                "cost": 10000
+            }
+        ],
+        "rentalIncomePotential":900,
+        "expectedROI": 0.45,
+        "schoolDistrictRating": 6.0,
+        "walkabilityScore": 3.8,
+        "crimeRate": 5.5,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Colonial Cabin",
+        "category": "Neighborhood",
+        "city": "Paris",
+        "state": "TX",
+        "id": 1003,
+        "isFeatured": false,
+        "isFavorite": true,
+        "isBookmarked": false,
+        "askingPrice": 67400,
+        "coordinates": {
+            "longitude": -95.588345,
+            "latitude": 33.652809
+        },
+        "imageName": "colonialcabin",
+        "renovationCost": 25000,
+        "potentialValueAfterRenovation": 120000,
+        "renovationDifficulty": "Easy",
+        "renovationPriorityAreas": ["Kitchen", "Landscaping"],
+        "condition": "Good",
+        "needsInspection": false,
+        "lastRenovationDate": "2017-03-11",
+        "renovationHistory": [
+            {
+                "date": "2017-03-11",
+                "description": "Remodeled kitchen and added new flooring",
+                "cost": 15000
+            }
+        ],
+        "rentalIncomePotential": 1100,
+        "expectedROI": 0.55,
+        "schoolDistrictRating": 7.8,
+        "walkabilityScore": 5.6,
+        "crimeRate": 3.2,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Country Catchpenny",
+        "category": "Rural",
+        "city": "Browning",
+        "state": "MT",
+        "id": 1004,
+        "isFeatured": true,
+        "isFavorite": true,
+        "isBookmarked": false,
+        "askingPrice": 70105,
+        "coordinates": {
+            "longitude": -113.021345,
+            "latitude": 48.558138
+        },
+        "imageName": "countrycatchpenny",
+        "renovationCost": 40000,
+        "potentialValueAfterRenovation": 140000,
+        "renovationDifficulty": "Difficult",
+        "renovationPriorityAreas": ["Foundation", "Roof", "Windows"],
+        "condition": "Poor",
+        "needsInspection": true,
+        "lastRenovationDate": "2008-11-02",
+        "renovationHistory": [
+            {
+                "date": "2008-11-02",
+                "description": "Replaced windows and repaired foundation cracks",
+                "cost": 25000
+            }
+        ],
+        "rentalIncomePotential": 1500,
+        "expectedROI": 0.50,
+        "schoolDistrictRating": 5.5,
+        "walkabilityScore": 2.0,
+        "crimeRate": 6.8,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Pale Blue Bargain",
+        "category": "Neighborhood",
+        "city": "Twin Lakes",
+        "state": "WI",
+        "id": 1005,
+        "isFeatured": false,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 101297,
+        "coordinates": {
+            "longitude": -88.285258,
+            "latitude": 42.521914
+        },
+        "imageName": "palebluebargain",
+        "renovationCost": 20000,
+        "potentialValueAfterRenovation": 180000,
+        "renovationDifficulty": "Easy",
+        "renovationPriorityAreas": ["Bathroom", "Landscaping"],
+        "condition": "Good",
+        "needsInspection": false,
+        "lastRenovationDate": "2016-07-15",
+        "renovationHistory": [
+            {
+                "date": "2016-07-15",
+                "description": "Updated bathroom and installed new landscaping",
+                "cost": 12000
+            }
+        ],
+        "rentalIncomePotential": 1300,
+        "expectedROI": 0.60,
+        "schoolDistrictRating": 8.0,
+        "walkabilityScore": 6.5,
+        "crimeRate": 3.0,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Shaggy Shed",
+        "category": "Rural",
+        "city": "Richmond",
+        "state": "IL",
+        "id": 1006,
+        "isFeatured": false,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 16935,
+        "coordinates": {
+            "longitude": -88.292653,
+            "latitude": 42.461384
+        },
+        "imageName": "shaggyshed",
+        "renovationCost": 15000,
+        "potentialValueAfterRenovation": 50000,
+        "renovationDifficulty": "Easy",
+        "renovationPriorityAreas": ["Roof", "Exterior Paint"],
+        "condition": "Poor",
+        "needsInspection": true,
+        "lastRenovationDate": "2005-05-10",
+        "renovationHistory": [
+            {
+                "date": "2005-05-10",
+                "description": "Replaced roof shingles and repainted exterior",
+                "cost": 8000
+            }
+        ],
+        "rentalIncomePotential":500,
+        "expectedROI": 0.75,
+        "schoolDistrictRating": 4.5,
+        "walkabilityScore": 2.8,
+        "crimeRate": 5.9,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Front Porch Flipper",
+        "category": "Rural",
+        "city": "Paradise",
+        "state": "IA",
+        "id": 1007,
+        "isFeatured": true,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 53352,
+        "coordinates": {
+            "longitude": -95.531267,
+            "latitude": 42.016130
+        },
+        "imageName": "frontporchflipper",
+        "renovationCost": 20000,
+        "potentialValueAfterRenovation": 90000,
+        "renovationDifficulty": "Moderate",
+        "renovationPriorityAreas": ["Front Porch", "Kitchen"],
+        "condition": "Fair",
+        "needsInspection": true,
+        "lastRenovationDate": "2014-09-22",
+        "renovationHistory": [
+            {
+                "date": "2014-09-22",
+                "description": "Remodeled front porch and updated kitchen",
+                "cost": 18000
+            }
+        ],
+        "rentalIncomePotential": 1000,
+        "expectedROI": 0.55,
+        "schoolDistrictRating": 6.2,
+        "walkabilityScore": 4.0,
+        "crimeRate": 4.7,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Stilted Steal",
+        "category": "Waterfront",
+        "city": "Tampa",
+        "state": "FL",
+        "id": 1008,
+        "isFeatured": false,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 88887,
+        "coordinates": {
+            "longitude": -82.588964,
+            "latitude": 27.984479
+        },
+        "imageName": "stiltedsteal",
+        "renovationCost": 45000,
+        "potentialValueAfterRenovation": 160000,
+        "renovationDifficulty": "Difficult",
+        "renovationPriorityAreas": ["Foundation", "Roof", "Deck"],
+        "condition": "Poor",
+        "needsInspection": true,
+        "lastRenovationDate": "2012-12-15",
+        "renovationHistory": [
+            {
+                "date": "2012-12-15",
+                "description": "Repaired deck and reinforced foundation",
+                "cost": 30000
+            }
+        ],
+        "rentalIncomePotential": 1700,
+        "expectedROI": 0.40,
+        "schoolDistrictRating": 7.2,
+        "walkabilityScore": 5.0,
+        "crimeRate": 4.1,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Suburban Setup",
+        "category": "Neighborhood",
+        "city": "Austin",
+        "state": "TX",
+        "id": 1009,
+        "isFeatured": false,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 99915,
+        "coordinates": {
+            "longitude": -97.849547,
+            "latitude": 30.292859
+        },
+        "imageName": "suburbansetup",
+        "renovationCost": 35000,
+        "potentialValueAfterRenovation": 180000,
+        "renovationDifficulty": "Moderate",
+        "renovationPriorityAreas": ["Bathroom", "Garage"],
+        "condition": "Fair",
+        "needsInspection": true,
+        "lastRenovationDate": "2018-05-08",
+        "renovationHistory": [
+            {
+                "date": "2018-05-08",
+                "description": "Upgraded bathroom and expanded garage",
+                "cost": 22000
+            }
+        ],
+        "rentalIncomePotential": 1400,
+        "expectedROI": 0.45,
+        "schoolDistrictRating": 8.5,
+        "walkabilityScore": 7.0,
+        "crimeRate": 3.5,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Two Story Treat",
+        "category": "Neighborhood",
+        "city": "Sedro-Woolley",
+        "state": "WA",
+        "id": 1010,
+        "isFeatured": false,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 128677,
+        "coordinates": {
+            "longitude": -122.241830,
+            "latitude": 48.497200
+        },
+        "imageName": "twostorytreat",
+        "renovationCost": 30000,
+        "potentialValueAfterRenovation": 220000,
+        "renovationDifficulty": "Moderate",
+        "renovationPriorityAreas": ["Kitchen", "Roof"],
+        "condition": "Good",
+        "needsInspection": false,
+        "lastRenovationDate": "2019-11-18",
+        "renovationHistory": [
+            {
+                "date": "2019-11-18",
+                "description": "Remodeled kitchen and replaced roof shingles",
+                "cost": 28000
+            }
+        ],
+        "rentalIncomePotential": 1800,
+        "expectedROI": 0.50,
+        "schoolDistrictRating": 8.0,
+        "walkabilityScore": 7.5,
+        "crimeRate": 3.0,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Cut-rate Cottage",
+        "category": "Rural",
+        "city": "Franklin",
+        "state": "VA",
+        "id": 1011,
+        "isFeatured": false,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 32371,
+        "coordinates": {
+            "longitude": -76.961524,
+            "latitude": 36.688632
+        },
+        "imageName": "cutratecottage",
+        "renovationCost": 10000,
+        "potentialValueAfterRenovation": 60000,
+        "renovationDifficulty": "Easy",
+        "renovationPriorityAreas": ["Roof", "Windows"],
+        "condition": "Fair",
+        "needsInspection": true,
+        "lastRenovationDate": "2011-04-07",
+        "renovationHistory": [
+            {
+                "date": "2011-04-07",
+                "description": "Replaced windows and repaired roof",
+                "cost": 7500
+            }
+        ],
+        "rentalIncomePotential":700,
+        "expectedROI": 0.65,
+        "schoolDistrictRating": 6.5,
+        "walkabilityScore": 3.9,
+        "crimeRate": 5.0,
+        "plannedVisitDate": null
+    },
+    {
+        "name": "Woodland Wonder",
+        "category": "Rural",
+        "city": "Garden City",
+        "state": "AL",
+        "id": 1012,
+        "isFeatured": true,
+        "isFavorite": false,
+        "isBookmarked": false,
+        "askingPrice": 23716,
+        "coordinates": {
+            "longitude": -86.750634,
+            "latitude": 34.020006
+        },
+        "imageName": "woodlandwonder",
+        "renovationCost": 12000,
+        "potentialValueAfterRenovation": 75000,
+        "renovationDifficulty": "Moderate",
+        "renovationPriorityAreas": ["Exterior", "Plumbing"],
+        "condition": "Poor",
+        "needsInspection": true,
+        "lastRenovationDate": "2013-02-13",
+        "renovationHistory": [
+            {
+                "date": "2013-02-13",
+                "description": "Updated plumbing and repaired exterior damage",
+                "cost": 10000
+            }
+        ],
+        "rentalIncomePotential":600,
+        "expectedROI": 0.80,
+        "schoolDistrictRating": 5.0,
+        "walkabilityScore": 2.5,
+        "crimeRate": 6.0,
+        "plannedVisitDate": null
+    }
+
+]
