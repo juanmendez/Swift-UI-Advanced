@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SwiftUiAdvancedApp: App {
+struct FlipFinderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
