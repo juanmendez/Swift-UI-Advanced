@@ -12,12 +12,12 @@ struct ZStackDemo0: View {
     
     var body: some View {
         ZStack {
-            ForEach(0..<colors.count) {
+            ForEach(colors.indices, id: \.self) { index in
                 Rectangle()
-                    .fill(colors[$0])
+                    .fill(colors[index])
                     .frame(width: 100, height: 100)
-                    .offset(x: CGFloat($0) * 10.0,
-                            y: CGFloat($0) * 10.0
+                    .offset(x: CGFloat(index) * 10.0,
+                            y: CGFloat(index) * 10.0
                     )
             }
         }

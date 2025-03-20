@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var fixerUppers = fixerUpperData
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                ForEach(fixerUppers) { fixerUpper in
+                    NavigationLink {
+                        DetailsView(fixerUpper: fixerUpper)
+                    } label: {
+                        FixedUpperCardView(fixerUpper: fixerUpper)
+                            .padding(.bottom, 50)
+                    }
+                    .buttonStyle(.plain)
+                    .navigationTitle(Text("Fixer upper"))
+                }
+            }
         }
-        .padding()
     }
 }
 
