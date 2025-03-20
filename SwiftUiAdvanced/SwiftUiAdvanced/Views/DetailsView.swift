@@ -11,6 +11,7 @@ import SwiftUI
 struct DetailsView: View {
     var fixerUpper: FixerUpper
     @State private var showMoreDetails = true
+    @State private var showEditModal = false
 
     var body: some View {
         ScrollView {
@@ -34,14 +35,30 @@ struct DetailsView: View {
             }
             .padding()
         }
+        .sheet(isPresented: $showEditModal) {
+            EditView(fixerUpper: self.fixerUpper)
+        }
     }
 
+    /**
+     Very interesting how Views are declared separately instead of being part of the main body..
+     */
     private var headerView: some View {
         VStack(alignment: .leading) {
-            Text(fixerUpper.name)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.primary)
+            HStack {
+                Text(fixerUpper.name)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.primary)
+                
+                Spacer()
+                
+                Button {
+                    showEditModal = true
+                } label: {
+                    Image(systemName: "pencil.circle").font(.title)
+                }
+            }
 
             ZStack(alignment: .topLeading) {
                 fixerUpper.image
