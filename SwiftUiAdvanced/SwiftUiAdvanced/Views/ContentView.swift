@@ -13,11 +13,11 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                ForEach(fixerUppers) { fixerUpper in
+                ForEach($fixerUppers) { fixerUpper in
                     NavigationLink {
                         DetailsView(fixerUpper: fixerUpper)
                     } label: {
-                        FixedUpperCardView(fixerUpper: fixerUpper)
+                        FixedUpperCardView(fixerUpper: fixerUpper.wrappedValue)
                             .padding(.bottom, 50)
                     }
                     .buttonStyle(.plain)

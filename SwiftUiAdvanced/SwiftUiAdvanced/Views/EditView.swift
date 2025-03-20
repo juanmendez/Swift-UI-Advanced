@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct EditView: View {
+    @Binding
     var fixerUpper: FixerUpper
     
     var body: some View {
         VStack {
-            Text("Edit \(fixerUpper.name)")
+            TextField("Edit \(fixerUpper.name)", text: $fixerUpper.name)
                 .font(.largeTitle)
                 .padding()
         }
@@ -20,5 +21,8 @@ struct EditView: View {
 }
 
 #Preview {
-    EditView( fixerUpper: fixerUpperData.first!)
+    @Previewable
+    @State var fixerUpperToEdit = fixerUpperData.first!
+    
+    EditView( fixerUpper: $fixerUpperToEdit)
 }

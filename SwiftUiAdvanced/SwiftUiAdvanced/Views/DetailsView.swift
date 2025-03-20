@@ -9,6 +9,7 @@ import MapKit
 import SwiftUI
 
 struct DetailsView: View {
+    @Binding
     var fixerUpper: FixerUpper
     @State private var showMoreDetails = true
     @State private var showEditModal = false
@@ -36,7 +37,7 @@ struct DetailsView: View {
             .padding()
         }
         .sheet(isPresented: $showEditModal) {
-            EditView(fixerUpper: self.fixerUpper)
+            EditView(fixerUpper: self.$fixerUpper)
         }
     }
 
@@ -191,5 +192,5 @@ struct DetailsView: View {
 #Preview {
     @Previewable @State var fixerUpper = fixerUpperData.first!
 
-    DetailsView(fixerUpper: fixerUpper)
+    DetailsView(fixerUpper: $fixerUpper)
 }
