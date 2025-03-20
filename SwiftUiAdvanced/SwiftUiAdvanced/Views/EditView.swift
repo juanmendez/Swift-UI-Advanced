@@ -9,10 +9,15 @@ import SwiftUI
 
 struct EditView: View {
     var fixerUpper: FixerUpper
-    
+
     var body: some View {
+        /**
+         The bindable annotation is only available for ObservableObjects, not structs..
+         if FixerUpper were a Struct, then we would use instead Binding
+         */
+        @Bindable var fixerUpperToEdit = self.fixerUpper
         VStack {
-            Text("Edit \(fixerUpper.name)")
+            TextField("Edit \(fixerUpperToEdit.name)", text: $fixerUpperToEdit.name)
                 .font(.largeTitle)
                 .padding()
         }
@@ -20,5 +25,5 @@ struct EditView: View {
 }
 
 #Preview {
-    EditView( fixerUpper: fixerUpperData.first!)
+    EditView(fixerUpper: fixerUpperData.first!)
 }
