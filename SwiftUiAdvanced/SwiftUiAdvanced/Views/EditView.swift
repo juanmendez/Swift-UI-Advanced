@@ -19,8 +19,44 @@ struct EditView: View {
         VStack {
             TextField("Edit \(fixerUpperToEdit.name)", text: $fixerUpperToEdit.name)
                 .font(.largeTitle)
-                .padding()
+
+            TextField(
+                "Renovatin cost",
+                value: $fixerUpperToEdit.renovationCost,
+                formatter: NumberFormatter()
+            )
+            .keyboardType(.numberPad)
+
+            Toggle(isOn: $fixerUpperToEdit.isFavorite) {
+                Text("Favorite")
+            }
+
+            DatePicker(
+                selection: Binding(
+                    get: {
+                        fixerUpperToEdit.plannedVisitDate ?? Date()
+                    },
+                    set: { value in
+                        fixerUpperToEdit.plannedVisitDate = value
+                    }
+                ),
+                displayedComponents: .date
+            ) {
+                Text("Planed visit date")
+            }.datePickerStyle(.compact)
+
+            Picker(
+                selection: $fixerUpperToEdit.renovationDifficulty,
+                label: /*@START_MENU_TOKEN@*/ Text("Picker") /*@END_MENU_TOKEN@*/
+            ) {
+                ForEach(FixerUpper.RenovationDifficulty.allCases, id: \.self) { renovationDifficulty in
+                    Text(renovationDifficulty.rawValue).tag(renovationDifficulty)
+                }
+            }
+            .pickerStyle(.segmented)
+
         }
+        .padding()
     }
 }
 
