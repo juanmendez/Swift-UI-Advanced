@@ -16,47 +16,56 @@ struct EditView: View {
          if FixerUpper were a Struct, then we would use instead Binding
          */
         @Bindable var fixerUpperToEdit = self.fixerUpper
-        VStack {
-            TextField("Edit \(fixerUpperToEdit.name)", text: $fixerUpperToEdit.name)
-                .font(.largeTitle)
 
-            TextField(
-                "Renovatin cost",
-                value: $fixerUpperToEdit.renovationCost,
-                formatter: NumberFormatter()
-            )
-            .keyboardType(.numberPad)
+        Form {
+            Section("Fixer Upper") {
+                TextField("Edit \(fixerUpperToEdit.name)", text: $fixerUpperToEdit.name)
+                    .keyboardType(.asciiCapable)
+                    .autocorrectionDisabled()
+                    .textInputAutocapitalization(.never)
 
-            Toggle(isOn: $fixerUpperToEdit.isFavorite) {
-                Text("Favorite")
-            }
-
-            DatePicker(
-                selection: Binding(
-                    get: {
-                        fixerUpperToEdit.plannedVisitDate ?? Date()
-                    },
-                    set: { value in
-                        fixerUpperToEdit.plannedVisitDate = value
-                    }
-                ),
-                displayedComponents: .date
-            ) {
-                Text("Planed visit date")
-            }.datePickerStyle(.compact)
-
-            Picker(
-                selection: $fixerUpperToEdit.renovationDifficulty,
-                label: /*@START_MENU_TOKEN@*/ Text("Picker") /*@END_MENU_TOKEN@*/
-            ) {
-                ForEach(FixerUpper.RenovationDifficulty.allCases, id: \.self) { renovationDifficulty in
-                    Text(renovationDifficulty.rawValue).tag(renovationDifficulty)
+                Toggle(isOn: $fixerUpperToEdit.isFavorite) {
+                    Text("Favorite")
                 }
             }
-            .pickerStyle(.segmented)
 
+            Section("Renovation Details") {
+                LabeledContent("Renovation cost") {
+                    TextField(
+                        "Renovatin cost",
+                        value: $fixerUpperToEdit.renovationCost,
+                        formatter: NumberFormatter()
+                    )
+                    .keyboardType(.numberPad)
+                }
+                
+                Picker(
+                    selection: $fixerUpperToEdit.renovationDifficulty,
+                    label: /*@START_MENU_TOKEN@*/ Text("Picker") /*@END_MENU_TOKEN@*/
+                ) {
+                    ForEach(FixerUpper.RenovationDifficulty.allCases, id: \.self) { renovationDifficulty in
+                        Text(renovationDifficulty.rawValue).tag(renovationDifficulty)
+                    }
+                }
+                .pickerStyle(.segmented)
+            }
+            
+            Section("Visit details") {
+                DatePicker(
+                    selection: Binding(
+                        get: {
+                            fixerUpperToEdit.plannedVisitDate ?? Date()
+                        },
+                        set: { value in
+                            fixerUpperToEdit.plannedVisitDate = value
+                        }
+                    ),
+                    displayedComponents: .date
+                ) {
+                    Text("Planed visit date")
+                }.datePickerStyle(.compact)
+            }
         }
-        .padding()
     }
 }
 

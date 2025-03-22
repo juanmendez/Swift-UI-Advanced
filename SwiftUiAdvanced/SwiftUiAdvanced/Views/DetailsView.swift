@@ -50,9 +50,9 @@ struct DetailsView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.primary)
-                
+
                 Spacer()
-                
+
                 Button {
                     showEditModal = true
                 } label: {
@@ -65,6 +65,11 @@ struct DetailsView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .gesture(
+                        DragGesture().onEnded { gestureValue in
+                            fixerUpper.isFavorite.toggle()
+                        }
+                    )
 
                 if fixerUpper.isFavorite {
                     Circle()
