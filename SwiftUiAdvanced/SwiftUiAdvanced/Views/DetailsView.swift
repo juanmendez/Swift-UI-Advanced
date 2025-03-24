@@ -19,7 +19,9 @@ struct DetailsView: View {
                 headerView
 
                 Button {
-                    showMoreDetails.toggle()
+                    withAnimation {
+                        showMoreDetails.toggle()
+                    }
                 } label: {
                     Text("\(showMoreDetails ? "Hide" : "Show more") details")
                 }
@@ -31,6 +33,7 @@ struct DetailsView: View {
                         investmentDetailsView
                         environmentDetailsView
                     }
+                    .transition(.opacity)
                 }
             }
             .padding()
@@ -65,36 +68,39 @@ struct DetailsView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .gesture(
-                        DragGesture().onEnded { gestureValue in
+                    .onTapGesture {
+                        withAnimation(fixerUpper.isFavorite ? .easeInOut : .bouncy) {
                             fixerUpper.isFavorite.toggle()
                         }
-                    )
+                    }
 
-                if fixerUpper.isFavorite {
-                    Circle()
-                        .fill(.regularMaterial)
-                        .overlay(
-                            Image(systemName: "star.fill")
-                                .font(.largeTitle)
-                                .foregroundStyle(.yellow)
-                        )
-                        .overlay {
-                            Circle()
-                                .strokeBorder(
-                                    LinearGradient(colors: [.secondary, .primary], startPoint: .topLeading, endPoint: .bottomTrailing).opacity(0.3))
-                        }
-                        .frame(maxWidth: 75)
-                        .alignmentGuide(.leading) {
-                            d in d[.leading] - 10
-                        }
-                        .alignmentGuide(.top) {
-                            d in d[.top] - 10
-                        }
-                } else {
-                    EmptyView()
+                Group {
+                    if fixerUpper.isFavorite {
+                        Circle()
+                            .fill(.regularMaterial)
+                            .overlay(
+                                Image(systemName: "star.fill")
+                                    .font(.largeTitle)
+                                    .foregroundStyle(.yellow)
+                            )
+                            .overlay {
+                                Circle()
+                                    .strokeBorder(
+                                        LinearGradient(colors: [.secondary, .primary], startPoint: .topLeading, endPoint: .bottomTrailing).opacity(
+                                            0.3)
+                                    )
+                            }
+                            .frame(maxWidth: 75)
+                            .alignmentGuide(.leading) { d in
+                                d[.leading] - 10
+                            }
+                            .alignmentGuide(.top) { d in
+                                d[.top] - 10
+                            }
+                    } else {
+                        EmptyView()
+                    }
                 }
-
             }
 
             Text("\(fixerUpper.city), \(fixerUpper.state)")

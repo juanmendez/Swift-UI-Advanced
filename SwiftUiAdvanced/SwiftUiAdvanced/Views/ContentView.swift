@@ -19,6 +19,11 @@ struct ContentView: View {
                     } label: {
                         FixedUpperCardView(fixerUpper: fixerUpper)
                             .padding(.bottom, 50)
+                            .scrollTransition { content, phase in
+                                content
+                                    .scaleEffect(phase == .identity ? 1 : 0.95)
+                                    .opacity(phase.isIdentity ? 1 : 0.3)
+                            }
                     }
                     .buttonStyle(.plain)
                     .navigationTitle(Text("Fixer upper"))
